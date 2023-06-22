@@ -1,0 +1,46 @@
+1)Pascal Triangle
+
+#include <stdio.h>
+ 
+int main()
+{
+    int i,j,k,n;
+    scanf("%d",&n);
+ 
+    for (i = 1; i <= n; i++) { 
+        for (j = 0; j < n - i; j++) {
+            printf(" ");
+        }
+ 
+        int C = 1;
+        for (k = 1; k <= i; k++) {
+            printf("%d ", C);
+            C = C * (i - k) / k;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+2) Complex Multiplication
+
+#include<stdio.h>
+
+struct complex{
+    int a;
+    int b;
+    float img;
+}c;
+int main(){
+    int mul;
+    struct complex c;
+    printf("Enter your First number: ");
+    scanf("%d",&c.a);
+    printf("Enter your Second number: ");
+    scanf("%d",&c.b);
+    c.img=0.3;
+    mul=c.a*c.b;
+    printf("The Quadratic Solution is %d + %di",mul,c.img);
+    return 0;
+}
+
